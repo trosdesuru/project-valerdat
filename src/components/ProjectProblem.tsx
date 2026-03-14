@@ -24,7 +24,7 @@ export default function ProjectProblem({ data, className }: ProblemProps) {
         </div>
 
         {data.image && (
-          <figure className="mt-4 w-full overflow-hidden border p-6 rounded-xl border border-gray-200 shadow-sm">
+          <figure className="mt-4 w-full overflow-hidden border p-6 rounded-xl border-gray-200 shadow-sm">
             <img
               src={data.image.src}
               alt={data.image.alt}
