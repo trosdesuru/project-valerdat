@@ -1,0 +1,53 @@
+import { cn } from '@/lib/utils';
+import { DetailedOutcomesSection } from '@/lib/types';
+
+export default function ProjectDetailedOutcomes({
+  data,
+  className,
+}: {
+  data: DetailedOutcomesSection;
+  className?: string;
+}) {
+  const outcomes = [
+    { label: 'Impacto en negocio', data: data.business },
+    { label: 'Impacto en usuarios', data: data.user },
+    { label: 'Impacto en el equipo', data: data.team },
+  ];
+
+  return (
+    <section className={cn('flex flex-col gap-10 lg:gap-14', className)}>
+      <div className="flex max-w-6xl flex-col gap-3">
+        <span className="text-sm font-bold tracking-widest text-gray-500 uppercase">
+          Resultados
+        </span>
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
+          {data.subtitle}
+        </h2>
+      </div>
+
+      <div className="flex w-full flex-col gap-8">
+        {outcomes.map((item, index) => (
+          <div key={index}>
+            <h4 className="text-xl font-semibold text-gray-900">
+              {item.label}
+            </h4>
+            <p className="mt-2 text-base leading-relaxed text-gray-700">
+              <strong className="text-gray-900">{item.data.title}.</strong>{' '}
+              {item.data.description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {data.image && (
+        <figure className="w-full overflow-hidden">
+          <img
+            src={data.image.src}
+            alt={data.image.alt}
+            className="h-fill w-full object-cover"
+          />
+        </figure>
+      )}
+    </section>
+  );
+}
