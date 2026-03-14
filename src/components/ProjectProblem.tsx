@@ -24,11 +24,11 @@ export default function ProjectProblem({ data, className }: ProblemProps) {
         </div>
 
         {data.image && (
-          <figure className="mt-4 aspect-video w-full overflow-hidden">
+          <figure className="mt-4 w-full overflow-hidden border p-6 rounded-xl border border-gray-200 shadow-sm">
             <img
               src={data.image.src}
               alt={data.image.alt}
-              className="h-full w-full object-cover"
+              className="h-auto w-full object-contain"
             />
           </figure>
         )}

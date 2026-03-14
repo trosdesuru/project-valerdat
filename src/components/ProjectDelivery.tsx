@@ -45,7 +45,7 @@ export default function ProjectDelivery({ data, className }: DeliveryProps) {
       </div>
 
       {data.image && (
-        <figure className="w-full overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+        <figure className="w-full overflow-hidden p-12 rounded-xl border border-gray-200 shadow-sm">
           <img
             src={data.image.src}
             alt={data.image.alt}

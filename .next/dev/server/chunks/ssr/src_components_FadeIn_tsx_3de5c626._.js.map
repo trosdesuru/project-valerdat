@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/trosdesuru/workspace/project-valerdat/src/components/FadeIn.tsx"],"sourcesContent":["'use client';\n\nimport { motion } from 'framer-motion';\nimport { ReactNode } from 'react';\n\ninterface FadeInProps {\n  children: ReactNode;\n  className?: string;\n  delay?: number;\n}\n\nexport default function FadeIn({\n  children,\n  className,\n  delay = 0,\n}: FadeInProps) {\n  return (\n    <motion.div\n      initial={{ opacity: 0, y: 30 }}\n      whileInView={{ opacity: 1, y: 0 }}\n      viewport={{ once: true, margin: '-10%' }}\n      transition={{ duration: 0.6, delay, ease: 'easeOut' }}\n      className={className}\n    >\n      {children}\n    </motion.div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAWe,SAAS,OAAO,EAC7B,QAAQ,EACR,SAAS,EACT,QAAQ,CAAC,EACG;IACZ,qBACE,8OAAC,oMAAM,CAAC,GAAG;QACT,SAAS;YAAE,SAAS;YAAG,GAAG;QAAG;QAC7B,aAAa;YAAE,SAAS;YAAG,GAAG;QAAE;QAChC,UAAU;YAAE,MAAM;YAAM,QAAQ;QAAO;QACvC,YAAY;YAAE,UAAU;YAAK;YAAO,MAAM;QAAU;QACpD,WAAW;kBAEV;;;;;;AAGP"}}]
+}

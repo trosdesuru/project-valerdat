@@ -1,220 +1,195 @@
-import { CaseStudyProps } from '@/lib/types';
+import { CaseStudyProps } from "@/lib/types";
 
 export const projectData: CaseStudyProps = {
-  client: 'Al Borde del Burnout',
-  title: 'Diseñando un santuario digital para la salud mental',
+  client: "Valerdat",
+  title: "IA aplicada a la optimización de la cadena de suministro",
   shortDescription:
-    'Diseño y desarrollo de la plataforma web oficial para el podcast "Al Borde del Burnout", creando un espacio accesible y libre de fricciones que centraliza el contenido, fomenta la comunidad y ofrece recursos para la gestión del estrés.',
-  tags: [
-    'End-to-end UX/UI',
-    'Desarrollo Frontend',
-    'Salud Digital',
-    'Estrategia de Producto',
-  ],
+    "Rediseño y conceptualización de una plataforma SaaS B2B que utiliza modelos predictivos de Inteligencia Artificial para transformar la gestión de compras y suministros en el sector industrial.",
+  tags: ["B2B SaaS", "Data Visualization", "Supply Chain AI", "UX/UI Design"],
 
   heroImage: {
-    src: '/images/group-mac-iphone.png',
-    alt: 'Vista principal de la plataforma web Al Borde del Burnout',
+    src: "/images/macbook-dashboard.png",
+    alt: "Dashboard principal de la plataforma Valerdat con analítica predictiva",
   },
 
   metadata: {
-    role: 'UX Engineer & Frontend Developer',
-    timeline: '2024',
-    platform: 'Responsive Web App',
-    team: 'UX | UI Designer, Frontend Dev, CEO',
+    role: "UX/UI Designer",
+    timeline: "Ene 2023 – Jun 2023",
+    platform: "Web Desktop (SaaS)",
+    team: "CTO, Data Scientists, Frontend Developers, Product Manager",
     users:
-      'Profesionales, freelancers y personas interesadas en la salud mental, la gestión del estrés y la prevención del burnout.',
+      "Gestores de compras, directores de logística y responsables de operaciones en empresas industriales.",
     constraints:
-      'Necesidad de un gestor de contenidos ágil para actualizar episodios, presupuesto ajustado, optimización técnica para SEO.',
+      "Visualización de grandes volúmenes de datos complejos, integración de modelos de IA opacos (black box) y adaptabilidad a flujos de trabajo de ERPs tradicionales.",
   },
   introduction:
-    'Al Borde del Burnout es un podcast que aborda la salud mental a través de conversaciones honestas sobre la gestión del estrés y el agotamiento laboral. El proyecto necesitaba evolucionar de ser solo un canal de audio en plataformas de terceros a tener un hogar digital propio. Mi responsabilidad abarcó todo el ciclo del producto: desde traducir las necesidades de la comunidad en requisitos técnicos viables, hasta el diseño de la interfaz y su desarrollo frontend completo.',
+    "Valerdat es una startup que ayuda a las empresas industriales a tomar decisiones de compra más inteligentes mediante el análisis de datos. Mi reto como UX/UI Designer fue transformar algoritmos complejos de previsión de demanda y rotura de stock en una interfaz intuitiva y accionable que permitiera a los usuarios reducir costes y optimizar su inventario de forma proactiva.",
 
   outcomes: {
     business: {
-      title: 'Centralización de audiencia',
+      title: "Eficiencia en la toma de decisiones",
       description:
-        'Creación de un canal propio para fidelizar a la audiencia e impulsar la suscripción a la newsletter.',
+        "Transformación de datos brutos en recomendaciones automáticas de compra, reduciendo el riesgo de sobrestock y falta de suministro.",
     },
     users: {
-      title: 'Reducción de esfuerzo cognitivo',
+      title: "Simplificación de flujos complejos",
       description:
-        'Navegación anti-burnout que facilita la búsqueda de recursos y aumenta el tiempo de permanencia.',
+        "Sustitución de hojas de cálculo masivas por dashboards visuales que priorizan las tareas críticas del día a día.",
     },
     team: {
-      title: 'Flujo de trabajo sin bloqueos',
+      title: "Consistencia de diseño",
       description:
-        'Lanzamiento ágil al centralizar el diseño UX y la construcción técnica sin fricciones de handoff.',
+        "Creación de una biblioteca de componentes base que agilizó el desarrollo frontend y unificó la experiencia visual del producto.",
     },
   },
 
   problem: {
-    subtitle: 'Construyendo un hogar más allá de plataformas de terceros',
+    subtitle: "De la incertidumbre del dato a la acción inteligente",
     context: [
-      'El contenido de "Al Borde del Burnout" vivía disperso en plataformas como Spotify, iVoox o YouTube. No existía un punto de encuentro centralizado donde los oyentes pudieran profundizar en las temáticas, acceder de forma organizada a las notas de los programas, o conectar más estrechamente con la marca a través de la newsletter y recursos adicionales.',
+      "En el sector industrial, la gestión de suministros suele depender de procesos manuales y datos fragmentados en ERPs antiguos. Los gestores de compras carecían de una herramienta que les permitiera anticiparse a las fluctuaciones del mercado o errores en la cadena logística.",
     ],
     challenge:
-      'Diseñar y desarrollar desde cero una plataforma web que transmitiera calma y claridad, estructurando un catálogo creciente de episodios y recursos sin abrumar visualmente a un usuario que busca reducir su nivel de estrés.',
+      'El mayor desafío fue la "explicabilidad" de la IA: ¿cómo presentar una recomendación de compra generada por un algoritmo para que el usuario confíe en ella y la ejecute?',
     successCriteria: [
-      'Lanzamiento de una arquitectura de información clara que permitiera categorizar y reproducir episodios directamente en la web.',
-      'Alcanzar una puntuación de accesibilidad web superior al 95% en Lighthouse.',
-      'Lograr una conversión fluida de visitantes a suscriptores de la newsletter.',
+      "Reducción de la carga cognitiva en la supervisión de miles de referencias de productos.",
+      "Mejora en la legibilidad de gráficas predictivas y comparativas de proveedores.",
+      "Validación de los nuevos flujos de aprobación de pedidos dentro de la plataforma.",
     ],
     image: {
-      src: '/images/spotify.png',
-      alt: 'Dispersión de plataformas vs plataforma centralizada',
+      src: "/images/workflow-group.png",
+      alt: "Comparativa entre gestión tradicional en Excel vs Dashboard de Valerdat",
       caption:
-        'El reto: Unificar un ecosistema disperso en un solo santuario digital',
+        "El reto: Humanizar datos complejos para convertirlos en decisiones de negocio",
     },
   },
 
   research: {
-    subtitle: 'Entendiendo la carga cognitiva de nuestra audiencia',
+    subtitle: "Entendiendo el ecosistema de compras industriales",
     steps: [
       {
-        id: '00',
-        title: 'Objetivos de investigación',
+        id: "01",
+        title: "Entrevistas con stakeholders y usuarios",
         items: [
-          'Comprender cómo consumen contenido digital las personas interesadas en el bienestar mental.',
-          'Definir la arquitectura óptima para que la web actúe como una herramienta de apoyo, no como una carga adicional.',
+          'Identificación de los "pain points" en la gestión de stocks y la comunicación con proveedores.',
+          "Comprensión de las métricas críticas (KPIs) para un responsable de compras.",
         ],
       },
       {
-        id: '01',
-        title: 'Revisión heurística y análisis competitivo',
+        id: "02",
+        title: "Auditoría de visualización de datos",
         items: [
-          'Auditoría de los canales actuales del podcast y análisis de otros creadores de contenido del sector de la salud mental.',
+          "Análisis de cómo se presentan actualmente las previsiones de demanda para evitar errores de interpretación.",
         ],
       },
       {
-        id: '02',
-        title: 'Feedback de usuarios y mercado',
+        id: "03",
+        title: "User Personas y User Journeys",
         items: [
-          'Análisis del feedback de la audiencia en redes sociales para descubrir carencias como por ejemplo, la necesidad de enlaces rápidos a libros recomendados en los episodio).',
-        ],
-      },
-      {
-        id: '03',
-        title: 'Mapeo de la experiencia',
-        items: [
-          'Mapeo del recorrido del oyente: desde que descubre un clip en redes sociales y escucha el audio, hasta que busca la web para suscribirse.',
-        ],
-      },
-      {
-        id: '04',
-        title: 'Definición y priorización',
-        items: [
-          'Priorización de un MVP centrado en 3 pilares: episodios accesibles, página "About" para humanizar el proyecto, y acceso directo a la comunidad.',
+          "Definición del perfil del gestor operativo frente al perfil directivo que busca visión global.",
         ],
       },
     ],
     image: {
-      src: '/images/research-square.png',
-      alt: 'Mapeo de experiencia de usuario',
+      src: "/images/stakeholders.png",
+      alt: "Mapa de empatía de un gestor de compras",
       caption:
-        'Mapeando el recorrido del oyente desde el descubrimiento hasta la fidelización',
+        "Investigación centrada en la precisión y la confianza del usuario en el dato",
     },
   },
 
   definition: {
-    subtitle:
-      'Acortando la brecha entre una UI calmada y requisitos técnicos robustos',
+    subtitle: "Arquitectura de información para la escalabilidad",
     context: [
-      'La transición de los wireframes a los requisitos técnicos fue directa; cada componente fue diseñado pensando en su inmediata implementación en Wordpress con HTML/CSS y algo de PHP, asegurando un desarrollo veloz y sin sorpresas tecnológicas.',
+      "Se definió una estructura modular que permitiera a la plataforma crecer en funcionalidades (módulos de proveedores, logística, sostenibilidad) sin comprometer la usabilidad.",
     ],
     scope: [
-      'Navegación anti-burnout: Uso extensivo del espacio en blanco y reducción al mínimo de elementos distractores o pop-ups agresivos.',
-      'Reproductor integrado: Funcionalidad para escuchar episodios en la misma página mientras se leen las show notes.',
-      'Fundación accesible: Wireframes diseñados estrictamente bajo criterios de Web Accessibility.',
+      "Dashboard predictivo: Vista general con alertas de rotura de stock y oportunidades de ahorro.",
+      "Gestión de escenarios: Herramienta para simular el impacto de decisiones de compra antes de ejecutarlas.",
+      "Diseño basado en datos: Implementación de tablas dinámicas y filtros avanzados para la gestión de catálogos extensos.",
     ],
     image: {
-      src: '/images/wireframe-mac.png',
-      alt: 'Wireframes y requisitos técnicos',
-      caption: 'Definiendo componentes escalables listos para React',
-    },
-    bottomImage: {
-      src: '/images/wireframe-mac.png',
-      alt: 'Detalle UI cuadrado',
+      src: "/images/ai-ux-research.png",
+      alt: "Wireframes de baja fidelidad de la plataforma SaaS",
+      caption: "Estructuración de dashboards con alta densidad de información",
     },
   },
 
   iterativeProcess: {
-    subtitle: 'Diseñando para la accesibilidad y la resonancia emocional',
+    subtitle: "Refinando la interacción hombre-máquina",
     highFidelity: [
-      'Desarrollo de un sistema de diseño propio en Figma.',
-      'Selección de una paleta de colores y tipografías que evitasen la fatiga visual, transmitiendo la honestidad y transparencia que caracterizan al podcast.',
+      "Uso de una paleta de colores profesional y sobria que enfatiza los estados de alerta (stock bajo) y éxito (ahorro conseguido).",
+      "Creación de componentes de visualización de datos (gráficas de tendencias, diagramas de flujo) adaptados a la densidad de datos industrial.",
     ],
     image: {
-      src: '/images/frame-group.png',
-      alt: 'Prototipos de alta fidelidad del proyecto',
+      src: "/images/wireframe-hight.png",
+      alt: "Pantallas de alta fidelidad del SaaS de Valerdat",
       caption:
-        'Evolución visual: De wireframes a una interfaz que transmite calma',
+        "Iteración visual centrada en la claridad y la eficiencia operativa",
     },
     testing: [
-      'Pruebas de usabilidad focalizadas en dispositivos móviles, dado que la inmensa mayoría de la audiencia de podcasts navega desde sus smartphones.',
-      'Iteraciones en el prototipo para mejorar el tamaño de las áreas de interacción (botones, controles de audio) y asegurar una lectura cómoda.',
+      "Sesiones de feedback con el equipo técnico para asegurar la viabilidad de las visualizaciones propuestas.",
+      "Validación de la jerarquía visual para asegurar que las alertas críticas no pasen desapercibidas.",
     ],
   },
 
   delivery: {
-    subtitle: 'Una base escalable lista para crecer',
+    subtitle: "Un producto listo para la industria 4.0",
     delivered: [
-      'Una plataforma web completamente responsiva.',
-      'Un sistema de diseño documentado en Figma.',
-      'Código frontend implementado y optimizado para SEO y rendimiento.',
+      "Prototipo interactivo de alta fidelidad para presentaciones a inversores y clientes.",
+      "Design System inicial documentado en Figma (colores, tipografía, componentes de tablas y formularios).",
+      "Flujos de usuario validados para los módulos principales de la plataforma.",
     ],
     improvements: [
-      'Visibilidad: Catálogo centralizado que mejora el SEO de los episodios a través de notas indexables.',
-      'Control de la audiencia: Independencia parcial de terceros al canalizar el tráfico hacia una newsletter propia.',
-      'Experiencia unificada: Los usuarios ya no saltan entre aplicaciones para encontrar libros o enlaces mencionados.',
+      "Confianza: Los usuarios entienden el porqué de las recomendaciones de la IA.",
+      "Productividad: Reducción drástica del tiempo de revisión manual de pedidos.",
+      "Escalabilidad: Una base visual sólida para la expansión del producto.",
     ],
     image: {
-      src: '/images/design-system.png',
-      alt: 'design system image'
-    }
+      src: "/images/delivery-components.png",
+      alt: "Vista general del ecosistema de diseño de Valerdat",
+    },
   },
 
   detailedOutcomes: {
-    subtitle:
-      'Desbloqueando la independencia y un camino claro para el crecimiento',
+    subtitle: "Impacto real en la cadena de valor",
     business: {
-      title: 'Un activo digital escalable',
+      title: "Posicionamiento estratégico",
       description:
-        'El proyecto cuenta ahora con una plataforma propia que permite la futura integración de áreas privadas, cursos o patrocinios de manera nativa y centralizada.',
+        "La nueva interfaz permitió a Valerdat diferenciarse de competidores con software obsoleto, facilitando el cierre de nuevos acuerdos comerciales.",
     },
     user: {
-      title: 'Un refugio digital sin fricciones',
+      title: "Control total",
       description:
-        'La comunidad dispone de un espacio seguro, diseñado específicamente para no sobreestimular, facilitando el acceso a la información crítica para su bienestar mental.',
+        'El usuario pasa de ser un "introductor de datos" a un "supervisor de estrategia", apoyado por la inteligencia del sistema.',
     },
     team: {
-      title: 'Eficiencia técnica desde el diseño',
+      title: "Alineación Producto-Diseño",
       description:
-        'La dualidad técnica y de diseño permitió priorizar el backlog de forma realista. Las decisiones de producto se tomaron sabiendo el coste de implementación, evitando rediseños de última hora.',
+        "La documentación detallada permitió una comunicación fluida entre el diseño y los científicos de datos encargados de los modelos.",
     },
     image: {
-      src: '/images/group-mac-iphone.png',
-      alt: 'hero image',
-    }
+      src: "/images/macbook-dashboard.png",
+      alt: "Mockup de la plataforma en un entorno de oficina industrial",
+    },
   },
 
   learnings: {
-    subtitle: 'Lo que este proyecto perfeccionó en mi práctica',
+    subtitle: "Lecciones sobre el diseño de productos de IA",
     items: [
       {
-        title: 'Diseño para accesibilidad extrema',
+        title: "La IA necesita transparencia",
         description:
-          'Trabajar en prevención del estrés me obligó a ser aún más estricto con la carga cognitiva, recordando que el diseño no solo debe ser estético, sino funcionalmente pacífico.',
+          "Aprendí que un diseño limpio no sirve de nada si el usuario no entiende la lógica detrás de una recomendación automatizada.",
       },
       {
-        title: 'El ownership end-to-end acelera la entrega',
+        title: "Densidad vs. Claridad",
         description:
-          'Estar a cargo tanto de la arquitectura UX como de las líneas de código frontend demostró que eliminar las barreras entre diseño e ingeniería es la vía más rápida para construir un MVP sólido.',
+          "En herramientas B2B, ocultar información no siempre es la solución; el reto es organizar la densidad para que sea escaneable.",
       },
       {
-        title: 'El contenido es la verdadera interfaz',
+        title: "El valor de la prototipación rápida",
         description:
-          'Aprendí que en plataformas impulsadas por creadores, el diseño debe dar un paso atrás y actuar únicamente como el escenario invisible que hace brillar al contenido.',
+          "Validar conceptos complejos con wireframes simples antes de pasar a diseño visual ahorra semanas de re-trabajo en el desarrollo de algoritmos.",
       },
     ],
   },

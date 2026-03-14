@@ -50,13 +50,13 @@ export default function CaseStudyHeader({
         </div>
       </div>
 
-      <div className="flex h-full items-center lg:col-span-6">
+      <div className="flex h-full intems-center lg:col-span-6">
         {image ? (
           <div className="aspect-video w-full overflow-hidden">
             <img
               src={image.src}
               alt={image.alt}
-              className="inset-0 h-full w-full object-cover object-center"
+              className="inset-0 h-full w-full object-contain object-center"
             />
           </div>
         ) : null}

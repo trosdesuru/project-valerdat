@@ -44,7 +44,7 @@ export default function ProjectDefinition({
 
         <div className="lg:col-span-5">
           {data.image && (
-            <figure className="sticky top-2 overflow-hidden">
+            <figure className="sticky top-2 overflow-hidden rounded-xl border p-6 border-gray-200 shadow-sm">
               <img
                 src={data.image.src}
                 alt={data.image.alt}
