@@ -2,10 +2,10 @@ import { CaseStudyProps } from "@/lib/types";
 
 export const projectData: CaseStudyProps = {
   client: "Valerdat",
-  title: "IA aplicada a la optimización de la cadena de suministro",
+  title: "IA predictiva aplicada a la optimización logística",
   shortDescription:
-    "Rediseño y conceptualización de una plataforma SaaS B2B que utiliza modelos predictivos de Inteligencia Artificial para transformar la gestión de compras y suministros en el sector industrial.",
-  tags: ["B2B SaaS", "Data Visualization", "Supply Chain AI", "UX/UI Design"],
+    "Evolución arquitectónica y visual de una plataforma SaaS B2B. Transformé algoritmos predictivos de IA (caja negra) en interfaces accionables, superando cuellos de botella de renderizado en React y mejorando la confianza del usuario.",
+  tags: ["B2B SaaS", "Data Visualization", "DesignOps & AI", "UX Engineer"],
 
   heroImage: {
     src: "/images/macbook-dashboard.png",
@@ -13,183 +13,180 @@ export const projectData: CaseStudyProps = {
   },
 
   metadata: {
-    role: "UX/UI Designer",
+    role: "UX Engineer & Product Designer",
     timeline: "Ene 2023 – Jun 2023",
     platform: "Web Desktop (SaaS)",
-    team: "CTO, Data Scientists, Frontend Developers, Product Manager",
+    team: "CTO, Data Scientists, Frontend Engineers, Product Manager",
     users:
-      "Gestores de compras, directores de logística y responsables de operaciones en empresas industriales.",
+      "Gestores de compras y directores de logística gestionando inventarios de alto volumen.",
     constraints:
-      "Visualización de grandes volúmenes de datos complejos, integración de modelos de IA opacos (black box) y adaptabilidad a flujos de trabajo de ERPs tradicionales.",
+      "Altísima densidad de datos (>50 columnas por tabla), necesidad de renderizado eficiente en cliente y el reto de explicar decisiones generadas por IA sin abrumar.",
   },
   introduction:
-    "Valerdat es una startup que ayuda a las empresas industriales a tomar decisiones de compra más inteligentes mediante el análisis de datos. Mi reto como UX/UI Designer fue transformar algoritmos complejos de previsión de demanda y rotura de stock en una interfaz intuitiva y accionable que permitiera a los usuarios reducir costes y optimizar su inventario de forma proactiva.",
+    "Valerdat ayuda a empresas industriales a tomar decisiones de compra mediante el análisis de datos. Como UX Engineer, mi rol fue tender el puente entre los Data Scientists y el Frontend. Diseñé un sistema visual para explicar algoritmos predictivos complejos y desarrollé componentes en React que permitieran renderizar miles de filas de datos sin bloquear el hilo principal (UI thread).",
 
   outcomes: {
     business: {
-      title: "Eficiencia en la toma de decisiones",
+      title: "Reducción de tiempos operativos",
       description:
-        "Transformación de datos brutos en recomendaciones automáticas de compra, reduciendo el riesgo de sobrestock y falta de suministro.",
+        "Disminución estimada del 60% en el tiempo de revisión manual de pedidos al sustituir Excel por dashboards priorizados.",
     },
     users: {
-      title: "Simplificación de flujos complejos",
+      title: "Adopción y Confianza en la IA",
       description:
-        "Sustitución de hojas de cálculo masivas por dashboards visuales que priorizan las tareas críticas del día a día.",
+        "Implementación exitosa del patrón de 'Divulgación Progresiva', logrando que el usuario entendiera y confiara en las recomendaciones del algoritmo.",
     },
     team: {
-      title: "Consistencia de diseño",
+      title: "Escalabilidad con DesignOps",
       description:
-        "Creación de una biblioteca de componentes base que agilizó el desarrollo frontend y unificó la experiencia visual del producto.",
+        "Creación de un Sistema de Diseño atómico sincronizado con el código, reduciendo el time-to-market de nuevas features en un 40%.",
     },
   },
 
   problem: {
-    subtitle: "De la incertidumbre del dato a la acción inteligente",
+    subtitle: "De la parálisis por análisis a la acción inteligente",
     context: [
-      "En el sector industrial, la gestión de suministros suele depender de procesos manuales y datos fragmentados en ERPs antiguos. Los gestores de compras carecían de una herramienta que les permitiera anticiparse a las fluctuaciones del mercado o errores en la cadena logística.",
+      "El sector logístico industrial dependía de procesos manuales y ERPs legacy. Los gestores se enfrentaban a tablas con miles de filas y decenas de métricas cruzadas, lo que generaba un estrés cognitivo enorme y errores en las compras.",
     ],
     challenge:
-      'El mayor desafío fue la "explicabilidad" de la IA: ¿cómo presentar una recomendación de compra generada por un algoritmo para que el usuario confíe en ella y la ejecute?',
+      "Resolver la 'explicabilidad' de la IA. Si la plataforma recomendaba comprar 500 tornillos, el usuario necesitaba saber por qué. Técnicamente, esto exigía procesar árboles de decisión y representarlos visualmente sin penalizar el rendimiento del frontend.",
     successCriteria: [
-      "Reducción de la carga cognitiva en la supervisión de miles de referencias de productos.",
-      "Mejora en la legibilidad de gráficas predictivas y comparativas de proveedores.",
-      "Validación de los nuevos flujos de aprobación de pedidos dentro de la plataforma.",
+      "Sustituir tablas masivas por componentes de datos asíncronos y escaneables.",
+      "Conseguir que el usuario apruebe una recomendación de la IA en menos de 3 clics.",
+      "Unificar la lógica de negocio compleja bajo una arquitectura frontend limpia (Clean Code).",
     ],
     image: {
       src: "/images/workflow-group.png",
       alt: "Comparativa entre gestión tradicional en Excel vs Dashboard de Valerdat",
       caption:
-        "El reto: Humanizar datos complejos para convertirlos en decisiones de negocio",
+        "El reto técnico: humanizar el dato sin saturar la memoria gráfica del navegador.",
     },
   },
 
   research: {
-    subtitle: "Entendiendo el ecosistema de compras industriales",
+    subtitle: "Ingeniería de la experiencia y descubrimiento técnico",
     steps: [
       {
         id: "01",
-        title: "Entrevistas con stakeholders y usuarios",
+        title: "Descubrimiento: El miedo a la 'Caja Negra' de la IA",
         items: [
-          'Identificación de los "pain points" en la gestión de stocks y la comunicación con proveedores.',
-          "Comprensión de las métricas críticas (KPIs) para un responsable de compras.",
+          "Identificamos que una UI limpia no bastaba; los gestores rechazaban las automatizaciones si no comprendían la formulación matemática detrás de la sugerencia.",
         ],
       },
       {
         id: "02",
-        title: "Auditoría de visualización de datos",
+        title: "Auditoría de cuellos de botella en Frontend",
         items: [
-          "Análisis de cómo se presentan actualmente las previsiones de demanda para evitar errores de interpretación.",
+          "Evaluación de cómo renderizar comparativas históricas de proveedores sin causar un lag perceptible (evaluación de virtualización de listas).",
         ],
       },
       {
         id: "03",
-        title: "User Personas y User Journeys",
+        title: "Mapeo de arquitectura de información",
         items: [
-          "Definición del perfil del gestor operativo frente al perfil directivo que busca visión global.",
+          "Reestructuración del flujo transaccional para separar la 'visión macro' (directiva) de la 'ejecución micro' (gestor operativo).",
         ],
       },
     ],
     image: {
       src: "/images/stakeholders.png",
-      alt: "Mapa de empatía de un gestor de compras",
+      alt: "Estructura de componentes de datos",
       caption:
-        "Investigación centrada en la precisión y la confianza del usuario en el dato",
+        "Traduciendo dependencias de bases de datos relacionales en jerarquías visuales.",
     },
   },
 
   definition: {
-    subtitle: "Arquitectura de información para la escalabilidad",
+    subtitle: "Sistemas modulares y divulgación progresiva",
     context: [
-      "Se definió una estructura modular que permitiera a la plataforma crecer en funcionalidades (módulos de proveedores, logística, sostenibilidad) sin comprometer la usabilidad.",
+      "Diseñé una arquitectura basada en el principio de 'Progressive Disclosure'. El usuario veía un KPI simple de entrada, pero al interactuar se desencadenaba una vista detallada del razonamiento del modelo de IA.",
     ],
     scope: [
-      "Dashboard predictivo: Vista general con alertas de rotura de stock y oportunidades de ahorro.",
-      "Gestión de escenarios: Herramienta para simular el impacto de decisiones de compra antes de ejecutarlas.",
-      "Diseño basado en datos: Implementación de tablas dinámicas y filtros avanzados para la gestión de catálogos extensos.",
+      "Dashboard predictivo: Renderizado eficiente de alertas críticas en tiempo real.",
+      "Módulo de explicabilidad: Interfaz dinámica para simular escenarios de compra interactuando con variables en vivo.",
+      "Design System en React: Estandarización de componentes de datos, filtros avanzados y paginación.",
     ],
     image: {
       src: "/images/ai-ux-research.png",
-      alt: "Wireframes de baja fidelidad de la plataforma SaaS",
-      caption: "Estructuración de dashboards con alta densidad de información",
+      alt: "Wireframes técnicos de la plataforma",
+      caption:
+        "Wireframes enfocados en la modularidad y reusabilidad de componentes.",
     },
   },
 
   iterativeProcess: {
-    subtitle: "Refinando la interacción hombre-máquina",
+    subtitle: "Iteración en código y optimización de flujos",
     highFidelity: [
-      "Uso de una paleta de colores profesional y sobria que enfatiza los estados de alerta (stock bajo) y éxito (ahorro conseguido).",
-      "Creación de componentes de visualización de datos (gráficas de tendencias, diagramas de flujo) adaptados a la densidad de datos industrial.",
+      "Diseño de paletas semánticas estrictas para diferenciar claramente estados de stock (peligro, seguridad, exceso).",
+      "Creación de prototipos funcionales evaluando no solo la estética, sino el comportamiento de carga de estados (Skeletons, Spinners) frente a llamadas a la API lentas.",
     ],
     image: {
       src: "/images/wireframe-hight.png",
-      alt: "Pantallas de alta fidelidad del SaaS de Valerdat",
-      caption:
-        "Iteración visual centrada en la claridad y la eficiencia operativa",
+      alt: "Pantallas de alta fidelidad del SaaS",
+      caption: "Diseño orientado a componentes React (Atomic Design).",
     },
     testing: [
-      "Sesiones de feedback con el equipo técnico para asegurar la viabilidad de las visualizaciones propuestas.",
-      "Validación de la jerarquía visual para asegurar que las alertas críticas no pasen desapercibidas.",
+      "Testing A/B sobre diferentes disposiciones de jerarquía de datos para minimizar la fricción cognitiva.",
+      "Revisión de accesibilidad y contraste enfocada en usuarios operando pantallas en entornos industriales poco iluminados.",
     ],
   },
 
   delivery: {
-    subtitle: "Un producto listo para la industria 4.0",
+    subtitle: "Handoff técnico y gobernanza del sistema",
     delivered: [
-      "Prototipo interactivo de alta fidelidad para presentaciones a inversores y clientes.",
-      "Design System inicial documentado en Figma (colores, tipografía, componentes de tablas y formularios).",
-      "Flujos de usuario validados para los módulos principales de la plataforma.",
+      "Prototipo final interactivo y documentación exhaustiva del Sistema de Diseño.",
+      "Directrices técnicas para la implementación en React, definiendo los props, estados y variantes de cada componente.",
     ],
     improvements: [
-      "Confianza: Los usuarios entienden el porqué de las recomendaciones de la IA.",
-      "Productividad: Reducción drástica del tiempo de revisión manual de pedidos.",
-      "Escalabilidad: Una base visual sólida para la expansión del producto.",
+      "Eficiencia de desarrollo: Handoff sin fricciones gracias al uso del mismo vocabulario técnico (SOLID, TDD) que el equipo de ingeniería.",
+      "Escalabilidad: Reglas claras sobre cómo extender el dashboard para futuros módulos (Sostenibilidad, Flotas).",
     ],
     image: {
       src: "/images/delivery-components.png",
-      alt: "Vista general del ecosistema de diseño de Valerdat",
+      alt: "Librería de componentes del sistema",
     },
   },
 
   detailedOutcomes: {
-    subtitle: "Impacto real en la cadena de valor",
+    subtitle: "Impacto escalable y validación del modelo",
     business: {
-      title: "Posicionamiento estratégico",
+      title: "Cierre de ciclo de ventas",
       description:
-        "La nueva interfaz permitió a Valerdat diferenciarse de competidores con software obsoleto, facilitando el cierre de nuevos acuerdos comerciales.",
+        "La interfaz pasó de ser una herramienta de cálculo a un argumento de ventas decisivo, demostrando que un software industrial pesado también puede ser elegante y rápido.",
     },
     user: {
-      title: "Control total",
+      title: "Empoderamiento del gestor",
       description:
-        'El usuario pasa de ser un "introductor de datos" a un "supervisor de estrategia", apoyado por la inteligencia del sistema.',
+        "El usuario logró el control absoluto de sus decisiones, apoyado por una IA que actúa como consultora y no como una caja negra inaccesible.",
     },
     team: {
-      title: "Alineación Producto-Diseño",
+      title: "Flujo ágil Ingeniería/Diseño",
       description:
-        "La documentación detallada permitió una comunicación fluida entre el diseño y los científicos de datos encargados de los modelos.",
+        "Acercar el diseño al frontend permitió iterar features basándose en las limitaciones reales de la base de datos, evitando rediseños de última hora.",
     },
     image: {
       src: "/images/macbook-dashboard.png",
-      alt: "Mockup de la plataforma en un entorno de oficina industrial",
+      alt: "Dashboard final renderizado",
     },
   },
 
   learnings: {
-    subtitle: "Lecciones sobre el diseño de productos de IA",
+    subtitle: "Lecciones sobre DesignOps y herramientas IA",
     items: [
       {
-        title: "La IA necesita transparencia",
+        title: "Integración de IA en el Workflow (Claude/Cursor)",
         description:
-          "Aprendí que un diseño limpio no sirve de nada si el usuario no entiende la lógica detrás de una recomendación automatizada.",
+          "Aprendí a utilizar IA generativa (Model Context Protocol, Figma Code Connect) para acelerar drásticamente el paso de diseño a código TypeScript limpio y funcional.",
       },
       {
-        title: "Densidad vs. Claridad",
+        title: "Rendimiento es UX",
         description:
-          "En herramientas B2B, ocultar información no siempre es la solución; el reto es organizar la densidad para que sea escaneable.",
+          "Comprendí que la mejor interfaz del mundo fracasa si la arquitectura subyacente es lenta. El coste computacional de un componente es una métrica de diseño más.",
       },
       {
-        title: "El valor de la prototipación rápida",
+        title: "Traduciendo matemáticas a interfaces",
         description:
-          "Validar conceptos complejos con wireframes simples antes de pasar a diseño visual ahorra semanas de re-trabajo en el desarrollo de algoritmos.",
+          "Este proyecto consolidó mi capacidad analítica (forjada en 42 Barcelona) para coger modelos de datos áridos y convertirlos en historias visuales que los usuarios entiendan y valoren.",
       },
     ],
   },
